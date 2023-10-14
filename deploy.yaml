@@ -21,12 +21,12 @@ spec:
           httpGet:
             path: /
             port: 80
-          initialDelaySeconds: 20
+          initialDelaySeconds: 60
           periodSeconds: 3
         livenessProbe:
           httpGet:
             path: /
             port: 80
-          initialDelaySeconds: 20
+          initialDelaySeconds: 60
           periodSeconds: 3
-healtCheckNodePort: 80   
+ 
