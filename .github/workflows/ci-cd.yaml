@@ -25,4 +25,6 @@ jobs:
           docker build -t carlosm04/bootcamp:version .
           docker push carlosm04/bootcamp:version
       - name: Update Kubernetes Deployment
-        run: kubectl apply -f deploy.yaml -n kanban
+        run: 
+          aws eks update-kubeconfig --name eks-grupo0 --alias eks-grupoCM --region us-east-1
+          kubectl apply -f deploy.yaml -n kanban
