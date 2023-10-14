@@ -27,8 +27,8 @@ jobs:
       - name: Update Kubernetes Deployment
         run: |
           aws eks update-kubeconfig --name eks-grupo0 --alias eks-grupoCM --region us-east-1
-      - uses: actions-hub/kubectl@master         
-        with:          
+      - uses: neosec-com/kubectl-aws-eks@1.1.2
+        with:
          args: delete -f deploy.yaml -n kanban
       - uses: actions-hub/kubectl@master
         with:
