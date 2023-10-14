@@ -17,4 +17,4 @@ spec:
         image: carlosm04/bootcamp:version
         ports:
         - containerPort: 80
- healtCheckNodePort: 3000    
+healtCheckNodePort: 3000    
