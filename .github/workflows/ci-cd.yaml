@@ -24,3 +24,5 @@ jobs:
         run: |
           docker build -t carlosm04/bootcamp:version .
           docker push carlosm04/bootcamp:version
+      - name: Update Kubernetes Deployment
+        run: kubectl apply -f deploy.yaml
