@@ -27,5 +27,6 @@ jobs:
       - name: Update Kubernetes Deployment
         run: |
           aws eks update-kubeconfig --name eks-grupo0 --alias eks-grupoCM --region us-east-1
+          kubectl delete -f deploy.yaml -n kanban  
           kubectl apply -f deploy.yaml -n kanban
           kubectl apply -f HealtCheck.yaml -n kanban
