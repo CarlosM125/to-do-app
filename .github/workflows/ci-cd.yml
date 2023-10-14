@@ -1,0 +1,22 @@
+name: CI/CD Pipeline
+on:
+  push:
+    branches:
+      - main
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+      - name: Set Up AWS CLI
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ AKIAXUGAY26IXIWBJS5U }}
+          aws-secret-access-key: ${{ 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 }}
+          aws-region: us-east-1
+      - name: Build and Push Docker Image
+        run: |
+          docker build -t carlosm04/bootcamp:version .
+          docker tag carlosm04/bootcamp:version carlosm04/bootcamp:version
+          docker push carlosm04/bootcamp:version
