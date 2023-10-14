@@ -17,5 +17,5 @@ jobs:
           aws-region: us-east-1
       - name: Build and Push Docker Image
         run: |
-          docker build -t carlosm04/bootcamp:version .
+          docker build -t carlosm04/bootcamp:latest .
           docker push carlosm04/bootcamp:latest
