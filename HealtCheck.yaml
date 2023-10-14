@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: healt-check-app
+spec:
+  selector:
+    app: to-do-app
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+  type: ClusterIP
+  
+  
+
