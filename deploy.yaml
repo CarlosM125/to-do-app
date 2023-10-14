@@ -20,13 +20,13 @@ spec:
         readinessProbe:
           httpGet:
             path: /readiness
-            port: 4444
+            port: 3000
           initialDelaySeconds: 20
           periodSeconds: 3
         livenessProbe:
           httpGet:
             path: /health
-            port: 4444
+            port: 3000
           initialDelaySeconds: 20
           periodSeconds: 3
 
